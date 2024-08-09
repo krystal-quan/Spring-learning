@@ -9,7 +9,7 @@ import java.util.HashSet;
 
 @RestController
 @RequestMapping("/api/user")
-public class HelloWorldController {
+public class UserController {
     @Autowired
     UserServiceImpl UserServiceImpl;
 

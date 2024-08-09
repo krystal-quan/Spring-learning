@@ -3,29 +3,44 @@ package com.example.demo.entity;
 //import lombok.Getter;
 //import lombok.Setter;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
+import org.springframework.context.annotation.Configuration;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 @Getter
+@Entity
+@Table(name = "user")
 public class User {
+
+    @Id
+    @NotNull
+    @JsonProperty("user_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
+    Long id;
+
     @Setter
     @JsonProperty("username")
     @NotBlank
+    @Column(name = "username", unique = true)
     String username;
 
     @JsonProperty("password")
     @NotBlank
+    @Column(name = "password")
     String password;
 
     @Setter
     @JsonProperty("name")
     @NotBlank
+    @Column(name = "name")
     String name;
 
     public User() {
