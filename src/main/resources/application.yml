@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: spring-boot-actuator
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 8080
+
+springdoc:
+  packagesToScan: com.example.demo.controller
+  pathsToMatch: /api/**
