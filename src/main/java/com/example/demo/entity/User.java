@@ -16,7 +16,7 @@ import java.security.NoSuchAlgorithmException;
 
 @Getter
 @Entity
-@Table(name = "user")
+@Table(name = "USERS")
 public class User {
 
     @Id

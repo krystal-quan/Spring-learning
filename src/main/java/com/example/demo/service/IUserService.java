@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.HashSet;
 
 @Service
-public interface UserService {
+public interface IUserService {
     Boolean addUser(String name, String username, String password);
     Boolean deleteUser(String username);
     Boolean deleteAll();

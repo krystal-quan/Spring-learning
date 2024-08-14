@@ -13,11 +13,19 @@ spring:
     password: ${project.db.password}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
+  security:
+    user:
+      name: ${project.admin.username}
+      password: ${project.admin.password}
+
 project:
   db:
     user: root
     password: 12345678
     url: jdbc:mysql://localhost:3306/spring_boot_demo?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&characterEncoding=utf-8
+  admin:
+    username: admin
+    password: 123456
 
 
 server:
