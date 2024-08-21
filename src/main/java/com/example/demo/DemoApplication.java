@@ -14,8 +14,8 @@ public class DemoApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		//Create SQL tables if they don't exist
-		String sql = "create table if not exists user (user_id int primary key auto_increment, name varchar(255), username varchar(255), password varchar(255))";
-		jdbcTemplate.execute(sql);
+//		String sql = "create table if not exists users (user_id int primary key auto_increment, name varchar(255), username varchar(255), password varchar(255))";
+//		jdbcTemplate.execute(sql);
 
 	}
 

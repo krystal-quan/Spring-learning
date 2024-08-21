@@ -1,6 +1,6 @@
 package com.example.demo.dtos;
 
-import com.example.demo.entity.UserRole;
+import com.example.demo.entity.Role;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,7 +16,7 @@ public class UserResponse {
 
     private Long id;
     private String username;
-    private Set<UserRole> roles;
+    private Set<Role> roles;
 
 
 }
